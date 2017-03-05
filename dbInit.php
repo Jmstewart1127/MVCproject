@@ -23,6 +23,4 @@ include('controllers/SignUpController.php');
 include('controllers/LoginController.php');
 
 
-
-
 ?>

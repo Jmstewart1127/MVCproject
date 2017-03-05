@@ -1,14 +1,11 @@
 <?php include('dbInit.php'); ?>
 
 <?php
-
-    if (isset($_POST['login']))
-    {
-        $login = new LoginController();
-        $login->login($_POST['username']);
-        $login->is_signed_in();
-    }
+    $login = new LoginController();
     $view = new TimeClockView();
+
+    $login->loginUser();
+
     $view->loggedInView();
 ?>
 

@@ -35,7 +35,7 @@ class User
 
         while ($row = mysqli_fetch_array($result_set))
         {
-            $the_object_array[] = self::instantation($row);
+            $the_object_array[] = self::instantiation($row);
         }
 
         return $the_object_array;

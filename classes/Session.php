@@ -6,22 +6,22 @@ class Session
     private $signed_in = false;
     public $user_id;
     public $message;
+    public $the_message;
 
-    function __construct()
-    {   // create session and check if
-        //  user is signed in... on app start.
-        session_start();
-        $this->check_the_login();
-        $this->check_message();
-
-    }
+//    function __construct()
+//    {   // create session and check if
+//        //  user is signed in... on app start.
+//        session_start();
+//        $this->check_the_login();
+//        $this->check_message();
+//
+//    }
 
 
     public function is_signed_in()
     {  // returns status of session,
         //   true or false.
         return $this->signed_in;
-
     }
 
 
@@ -62,7 +62,7 @@ class Session
         }
     }
 
-    public function message($msg = "")
+    public function message($msg = "Logged In")
     {
         if (!empty($msg))
         {
@@ -70,7 +70,7 @@ class Session
         }
         else
         {
-            return $this->message;
+            echo $this->message;
         }
     }
 
@@ -88,10 +88,9 @@ class Session
     }
 
 
+
+
 }
-
-
-
 $session = new Session();
 
 ?>

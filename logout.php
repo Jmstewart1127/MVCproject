@@ -2,7 +2,12 @@
 
 <?php
     $logout = new LoginController();
-    $logout->logout();
     $view = new TimeClockView();
+
+    if (isset($_POST['logout']))
+    {
+        $logout->logout();
+    }
+
     $view->indexView();
 ?>

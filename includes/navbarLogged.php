@@ -26,7 +26,7 @@
                     <a href="signup.php">Register</a>
                 </li>
                 <li>
-                    <a href="logout.php">Logout</a>
+                    <a href="logout.php" name="logout">Logout</a>
                 </li>
                 <li>
                     <form role="form" action="loggedIn.php" id="navLogin" method="POST" enctype="multipart/form-data">
@@ -34,7 +34,7 @@
                         <input type="password" id="password" name="password" placeholder="password">
                         <button type="submit" id="submit1" name="login" class="btn btn-default">Login</button>
                     </form>
-                    <p>Hello, <?php $session = new Session(); $session->message($message = "user") ?></p>
+                    <p style="color: white;">Hello, <?php $helloUser = new LoginController(); $helloUser->getUserName();  ?></p>
                 </li>
             </ul>
         </div>
