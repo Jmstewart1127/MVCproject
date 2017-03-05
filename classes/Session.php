@@ -8,14 +8,14 @@ class Session
     public $message;
     public $the_message;
 
-//    function __construct()
-//    {   // create session and check if
-//        //  user is signed in... on app start.
-//        session_start();
-//        $this->check_the_login();
-//        $this->check_message();
-//
-//    }
+    function __construct()
+    {   // create session and check if
+        //  user is signed in... on app start.
+        session_start();
+        $this->check_the_login();
+        $this->check_message();
+
+    }
 
 
     public function is_signed_in()
@@ -86,6 +86,8 @@ class Session
             $this->message = "";
         }
     }
+
+
 
 
 

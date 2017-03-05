@@ -1,49 +1,19 @@
 <?php
 
-class LoginController extends Session
+class LoginController extends User
 {
 
-    private $username;
-    private $password;
-    private $helloUser;
+    public $username;
 
-    public function loginUser()
+    public function getUsername()
     {
-        $session = new Session();
-
-        if ($session->is_signed_in()) {
-            redirect('index.php');
-        }
-
-        if (isset($_POST['login'])) {
-            session_start();
-            $username = trim($_POST['username']);
-            $password = trim($_POST['password']);
-            $user_found = User::verify_user($username, $password); // method to check db user.
-
-            if ($user_found) {
-                $session->login($user_found);
-                echo "done";
-            }
-            else {
-                $this->the_message = "Your password or username in invalid.";
-            }
-        }
-        else {
-            $this->username = "";
-            $this->password = "";
-        }
-
+        return $this->username;
     }
 
-    public function logoutUser()
+    public function setUsername($username)
     {
-        $this->logout();
+        $this->username = $username;
     }
 
-    public function getUserName()
-    {
-        return $this->helloUser = $_SESSION['username'];
-    }
 
 }

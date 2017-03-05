@@ -113,6 +113,15 @@ class User
         }
     }
 
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    public function getUserId()
+    {
+        echo $this->username;
+    }
 
 
 }
