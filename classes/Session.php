@@ -11,12 +11,11 @@ class Session
     function __construct()
     {   // create session and check if
         //  user is signed in... on app start.
-        session_start();
+        //session_start();
         $this->check_the_login();
         $this->check_message();
 
     }
-
 
     public function is_signed_in()
     {  // returns status of session,
@@ -47,7 +46,7 @@ class Session
     }
 
 
-    private function check_the_login()
+    public function check_the_login()
     {   //sets $signed_in to true
         // if user is signed in.
         if (isset($_SESSION['user_id']))

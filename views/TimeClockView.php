@@ -86,7 +86,7 @@ class TimeClockView
         include("includes/navbarLogged.php");
 
         //<!-- Page Content -->
-        include("includes/pageContent.php");
+        include("includes/timePunch.php");
 
 
         echo            '<!-- jQuery Version 1.11.1 -->';
