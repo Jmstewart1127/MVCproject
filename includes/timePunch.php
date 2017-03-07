@@ -4,13 +4,13 @@
             <h1>TimeClock</h1>
             <p class="lead">Clock in from any device</p>
             <div class="col-md-6">
-                <button class="btn" name="clockIn">Clock In</button>
+                <button class="btn" id="clockIn" name="clockIn">Clock In</button>
             </div>
             <div class="col-md-6">
-                <button class="btn" name="clockOut">Clock Out</button>
+                <button class="btn" id="clockOut" name="clockOut">Clock Out</button>
             </div>
             <div class="col-md-6 col-md-offset-3 text-align-center">
-                <p name="timeDisplay"><?php echo time(); ?></p>
+                <p id="timeDisplay" name="timeDisplay"></p>
             </div>
         </div>
     </div>

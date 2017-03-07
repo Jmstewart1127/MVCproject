@@ -12,6 +12,7 @@ define('DB_NAME','timeClock');
 include('classes/Database.php');
 include('classes/Session.php');
 include('classes/User.php');
+include ('classes/TimeClock.php');
 
 // Views
 
