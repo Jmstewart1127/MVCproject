@@ -23,7 +23,8 @@ class User
         global $database;
         $the_result_array = self::find_this_query("SELECT * FROM users WHERE id=$id LIMIT 1");
 
-        return !empty($the_result_array) ? array_shift($the_result_array) : false;
+        //return !empty($the_result_array) ? array_shift($the_result_array) : false;
+        return $the_result_array;
     }
 
 
@@ -118,9 +119,9 @@ class User
         $this->username = $username;
     }
 
-    public function getUserId()
+    public function getUsername()
     {
-        echo $this->username;
+        return $this->username;
     }
 
 
