@@ -1,10 +1,3 @@
-<?php
-    $user = new User();
-    $test = $user->getUsername();
-    $hi = "hi";
-
-?>
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,7 +34,7 @@
                         <input type="password" id="password" name="password" placeholder="password">
                         <button type="submit" id="submit1" name="login" class="btn btn-default">Login</button>
                     </form>
-                    <p style="color: white;"><?php  if ($_SESSION['user_id']) {echo "Logged In";};?></p>
+                    <p style="color: white;"><?php  if (isset($_SESSION['user_id'])) {echo "Logged In";}?></p>
                 </li>
             </ul>
         </div>

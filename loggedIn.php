@@ -21,7 +21,6 @@
 
         if ($user_found) {
             $session->login($user_found);
-            $user::find_user_by_id($_SESSION['user_id']);
         }
         else
         {

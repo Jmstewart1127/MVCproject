@@ -29,7 +29,7 @@ class Session
         // by id.
         if ($user)
         {
-            $this->user_id = $_SESSION['user_id'];
+            $this->user_id = $_SESSION['user_id'] = $user->id;
             $this->signed_in = true;
         }
 
@@ -53,12 +53,14 @@ class Session
         {
             $this->user_id = $_SESSION['user_id'];
             $this->signed_in = true;
+            return $this->user_id;
         }
         else
         {
             unset($this->user_id);
             $this->signed_in = false;
         }
+
     }
 
     public function message($msg = "Logged In")
